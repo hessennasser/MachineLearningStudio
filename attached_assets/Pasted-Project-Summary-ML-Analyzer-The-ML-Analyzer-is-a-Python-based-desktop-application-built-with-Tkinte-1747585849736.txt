@@ -1,0 +1,82 @@
+Project Summary: ML Analyzer
+The ML Analyzer is a Python-based desktop application built with Tkinter that allows users to upload datasets (CSV files), configure machine learning tasks (classification or regression), train models, and evaluate their performance—all within a user-friendly GUI.
+
+1. Current Features and Functionality
+The application consists of three main interface screens:
+
+Welcome Screen:
+Displays the project title.
+
+A “Start” button that navigates to the configuration page.
+
+Dataset Upload & Configuration:
+Allows users to upload CSV files.
+
+Automatically displays the column names.
+
+Users can select the task type: Classification or Regression.
+
+Depending on the selected task, the algorithm list is updated dynamically.
+
+Classification: KNN, SVM, Decision Tree.
+
+Regression: Linear Regression.
+
+Displays the first few rows of the dataset.
+
+Performs automated preprocessing:
+
+Handles missing values.
+
+Encodes categorical features.
+
+Normalizes numerical features (if applicable).
+
+Model Training, Prediction & Evaluation:
+Trains the selected model using the processed dataset.
+
+Provides manual input fields for live prediction.
+
+Displays evaluation results:
+
+Classification: Accuracy, Precision, Recall, F1 Score, Confusion Matrix.
+
+Regression: MAE, RMSE, R² Score, Predicted vs Actual plot.
+
+2. Desired UI Improvements
+Improve the overall visual design with a more modern and professional look (light/dark themes).
+
+Use consistent styling across all components via ttk.Style.
+
+Add layout responsiveness and spacing adjustments.
+
+Introduce progress indicators during long-running operations (e.g., model training).
+
+Add a status bar to communicate application state to the user.
+
+Provide a dropdown for selecting the target column instead of assuming the last column by default.
+
+3. Logic Enhancements
+Refactor the architecture to fully decouple data processing (DataHandler) from model training (ModelTrainer).
+
+Allow users to select the target column explicitly.
+
+Validate user input during manual predictions to handle edge cases gracefully.
+
+Improve modularity by injecting shared dependencies instead of creating new instances internally.
+
+Implement support for saving and loading trained models using joblib or pickle.
+
+Handle special column types such as datetime by ignoring or transforming them appropriately.
+
+4. Additional Feature Suggestions
+Implement model persistence: Save trained models and reload them later without retraining.
+
+Add support for more algorithms (e.g., Random Forest, Naive Bayes, Ridge, Lasso).
+
+Introduce exploratory data analysis (EDA) tools: null value summary, column type overview, distribution plots.
+
+Create a dedicated tab or screen for visual analytics (histograms, correlation heatmaps, etc.).
+
+Enable export of evaluation results and predictions to CSV or PDF.
+
